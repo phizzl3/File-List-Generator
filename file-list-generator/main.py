@@ -4,6 +4,7 @@ from pathlib import Path
 
 from modules import display
 from modules.fileoutput import output_file_list
+from utils.clearscreen import clear_screen
 from utils.dropfile import get_dropped_file
 from utils.openfile import open_file
 
@@ -20,6 +21,7 @@ def get_source_folder() -> Path:
 
 
 if __name__ == "__main__":
+    clear_screen()
     display.ascii_art(__version__)
     source_folder = get_source_folder()
     output_filepath = output_file_list(
