@@ -10,7 +10,7 @@ from pathlib import Path
 
 import listgen
 from utils.dropfile import get_dropped_file
-from utils.openfile import openfile
+from utils.openfile import open_file
 
 # Set output folder in user's Home directory and T/F to open output file
 OUTPUT_FOLDER = "Downloads"
@@ -29,7 +29,7 @@ output_file = listgen.main(source_folder=source_folder,
 
 # Optionally open output file or display a message
 if OPEN_FILE:
-    openfile(output_file)
+    open_file(output_file)
 else:
     print(f"\n File saved to {output_file}")
     time.sleep(3)
