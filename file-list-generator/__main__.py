@@ -9,7 +9,7 @@ import time
 from pathlib import Path
 
 import listgen
-from utils import dropfile
+from utils.dropfile import get_dropped_file
 from utils.openfile import openfile
 
 # Set output folder in user's Home directory and T/F to open output file
@@ -21,7 +21,7 @@ target_folder = Path().home().resolve() / OUTPUT_FOLDER
 
 # Get source filepath
 print("\n Drop the folder you'd like to list the contents of...")
-source_folder = dropfile.get()
+source_folder = get_dropped_file()
 
 # List files and output text file with contents
 output_file = listgen.main(source_folder=source_folder,
